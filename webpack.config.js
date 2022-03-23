@@ -1,10 +1,16 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { webpack } = require('webpack');
+const webpack = require('webpack');
 const port = process.env.PORT || 3000;
 
 module.exports = {
+  resolve: {
+    extensions: ['.js'],
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    },
+  },
   entry: './src/index.js',
   output: {
     filename: '[name].[chunkhash].js',
