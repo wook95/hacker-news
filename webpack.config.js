@@ -15,6 +15,7 @@ module.exports = {
   output: {
     filename: '[name].[chunkhash].js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -50,5 +51,6 @@ module.exports = {
     host: 'localhost',
     port: port,
     open: true,
+    historyApiFallback: true,
   },
 };
