@@ -9,7 +9,7 @@ const Home = () => {
       <Lists>
         {CATEGORIES.map(list => {
           return (
-            <List>
+            <List key={list.id}>
               <Link to={`/list/${list.endPoint}`}>{list.name}</Link>
             </List>
           );
