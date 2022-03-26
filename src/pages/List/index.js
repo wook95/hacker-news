@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Pagination from '@/pages/List/Pagination';
 import getList from '@/apis/api/list';
 import getListDescending from '@/apis/services/list';
+import { POSTS_PER_PAGE } from '@/constants/pagination';
 
 const List = () => {
   const params = useParams();
@@ -65,7 +66,5 @@ const ListCard = styled.div`
     transform: translateY(-0.5rem);
   }
 `;
-
-const POSTS_PER_PAGE = 17;
 
 export default List;

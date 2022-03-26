@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { PAGES_PER_BLOCK } from '@/constants/pagination';
 
 const Pagination = ({ totalPost, postsPerPage, page, setPage }) => {
   const totalPage = Math.ceil(totalPost / postsPerPage);
@@ -79,7 +80,5 @@ const Button = styled.button`
     transform: revert;
   }
 `;
-
-const PAGES_PER_BLOCK = 7;
 
 export default Pagination;
