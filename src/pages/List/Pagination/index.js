@@ -61,7 +61,7 @@ const Button = styled.button`
   transition: ease 150ms;
 
   &:hover {
-    background: ${props => props.theme.colors.pink};
+    background: ${props => props.theme.colors.gray100};
     transform: scale(1.1);
     cursor: pointer;
   }

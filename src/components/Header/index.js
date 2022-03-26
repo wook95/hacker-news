@@ -1,14 +1,17 @@
 import styled from 'styled-components';
+import Title from '@/components/base/Title';
 
 const Header = () => {
   return (
     <Container>
-      <div>헤더</div>
+      <Title />
     </Container>
   );
 };
 
 const Container = styled.div`
-  ${props => props.theme.wrapper}
+  display: flex;
+  justify-content: center;
 `;
+
 export default Header;
