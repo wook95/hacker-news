@@ -32,12 +32,16 @@ const List = styled.li`
   font-weight: 600;
   color: ${props => props.theme.colors.black100};
 
-  &[aria-current] a {
-    color: ${props => props.theme.colors.primary};
-  }
-
   a:hover {
     color: ${props => props.theme.colors.gray200};
+  }
+
+  &[aria-current] a {
+    color: ${props => props.theme.colors.primary};
+
+    &:hover {
+      color: ${props => props.theme.colors.primary500};
+    }
   }
 `;
 

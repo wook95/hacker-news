@@ -10,6 +10,7 @@ const wrapper = css`
 
 const colors = {
   primary: '#33b893',
+  primary500: '#94e7d1',
   blue: '#8fc4ff',
   pink: '#f5788c',
   gray100: '#848c94',

@@ -29,6 +29,7 @@ const TopContainer = styled.div`
   transform: translateX(-50%);
   width: 100%;
   background-color: ${props => props.theme.colors.white};
+  z-index: 1;
 `;
 
 const BottomContainer = styled.div`
