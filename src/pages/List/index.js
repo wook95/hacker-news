@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import Pagination from '@/pages/List/Pagination';
@@ -11,6 +11,10 @@ const List = () => {
 
   const [page, setPage] = useState(1);
   const offset = (page - 1) * POSTS_PER_PAGE;
+
+  useEffect(() => {
+    setPage(1);
+  }, [params]);
 
   const {
     isLoading,
