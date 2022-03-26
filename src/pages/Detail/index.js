@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useQuery, useQueries } from 'react-query';
 import styled from 'styled-components';
 import DOMPurify from 'dompurify';
+import Comment from '@/pages/Detail/Comment';
 import getDetail from '@/apis/api/detail';
 
 const Detail = () => {
@@ -14,6 +15,8 @@ const Detail = () => {
     data: postDetail,
   } = useQuery(postId, () => getDetail(postId), {});
   if (error) return 'An error has occurred: ' + error.message;
+
+  const comments = postDetail?.kids;
 
   return (
     <>
@@ -38,6 +41,7 @@ const Detail = () => {
             </>
           )}
           {postDetail?.url && <p>url {postDetail.url}</p>}
+          {comments && <Comment comments={comments} />}
         </div>
       )}
     </>
