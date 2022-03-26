@@ -9,7 +9,7 @@ const wrapper = css`
 `;
 
 const colors = {
-  primary: '#ff9270',
+  primary: '#33b893',
   blue: '#8fc4ff',
   pink: '#f5788c',
   gray100: '#848c94',

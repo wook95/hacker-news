@@ -45,18 +45,18 @@ const Container = styled.nav`
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  margin: 1rem;
+  margin: 2rem 1rem;
 `;
 
 const Button = styled.button`
   width: 3.5rem;
   padding: 1rem 0.5rem;
   margin: 0;
-  color: white;
+  color: ${props => props.theme.colors.white};
   background: ${props => props.theme.colors.black100};
-  border: 0;
+  border: 0rem solid ${props => props.theme.colors.gray500};
   border-radius: 0.8rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   box-shadow: 2px 2px 2px 1px ${props => props.theme.colors.gray800};
   transition: ease 150ms;
 
@@ -67,14 +67,14 @@ const Button = styled.button`
   }
 
   &[disabled] {
-    background: ${props => props.theme.colors.gray200};
+    background: ${props => props.theme.colors.gray300};
     cursor: revert;
     transform: revert;
   }
 
   &[aria-current] {
     background: ${props => props.theme.colors.primary};
-    font-weight: bold;
+    font-weight: 600;
     cursor: revert;
     transform: revert;
   }

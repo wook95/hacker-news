@@ -32,6 +32,7 @@ const TopContainer = styled.div`
 `;
 
 const BottomContainer = styled.div`
-  margin-top: 20rem;
+  margin: 21rem 0 10rem 0;
+  padding: 0 3rem;
 `;
 export default Layout;
