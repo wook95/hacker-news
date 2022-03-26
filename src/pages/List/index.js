@@ -56,9 +56,9 @@ const ListCard = styled.div`
   padding: 2rem 1rem;
   margin-bottom: 1rem;
   font-size: 1.4rem;
-  border: 1px solid #ccc;
+  border: 0.1rem solid #ccc;
   border-radius: 0.5rem;
-  box-shadow: 2px 2px 2px 1px ${props => props.theme.colors.gray800};
+  box-shadow: 0.2rem 0.2rem 0.2rem 0.1rem ${props => props.theme.colors.gray800};
   transition: ease 150ms;
 
   &:hover {

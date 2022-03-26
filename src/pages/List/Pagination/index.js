@@ -46,7 +46,7 @@ const Container = styled.nav`
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  margin: 2rem 1rem;
+  margin: 5rem;
 `;
 
 const Button = styled.button`
@@ -58,7 +58,7 @@ const Button = styled.button`
   border: 0rem solid ${props => props.theme.colors.gray500};
   border-radius: 0.8rem;
   font-size: 1.2rem;
-  box-shadow: 2px 2px 2px 1px ${props => props.theme.colors.gray800};
+  box-shadow: 0.2rem 0.2rem 0.2rem 0.1rem ${props => props.theme.colors.gray800};
   transition: ease 150ms;
 
   &:hover {
