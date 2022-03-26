@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from 'react-query';
-import Pagination from '@/pages/List/Pagination';
+import Pagination from '@/components/domain/Pagination';
 import getList from '@/apis/api/list';
 import getListDescending from '@/apis/services/list';
 

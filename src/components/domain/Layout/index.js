@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
-import Header from '@/components/Header';
-import TopNav from '@/components/TopNav';
+import Header from '@/components/domain/Header';
+import TopNav from '@/components/domain/TopNav';
 
 const Layout = () => {
   return (

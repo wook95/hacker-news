@@ -3,7 +3,7 @@ import Home from '@/pages/Home';
 import List from '@/pages/List';
 import Detail from '@/pages/Detail';
 import NotFound from '@/pages/NotFound';
-import Layout from './components/Layout';
+import Layout from './components/domain/Layout';
 
 const App = () => {
   return (
