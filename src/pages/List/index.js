@@ -1,20 +1,23 @@
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import getList from '@/apis/api/list';
 import getListDescending from '@/apis/services/list';
+import Pagination from '@/pages/List/Pagination';
 
 const List = () => {
   const params = useParams();
   const category = params.id;
+
+  const [page, setPage] = useState(1);
+  const offset = (page - 1) * POSTS_PER_PAGE;
 
   const {
     isLoading,
     error,
     data: sortedList,
   } = useQuery(category, () => getList(category).then(getListDescending));
-
   if (error) return 'An error has occurred: ' + error.message;
-  console.log(sortedList);
 
   return (
     <div>
@@ -22,12 +25,20 @@ const List = () => {
       {isLoading ? (
         <div>Loading . . .</div>
       ) : (
-        sortedList.map(list => {
+        sortedList.slice(offset, offset + POSTS_PER_PAGE).map(list => {
           return <div key={list}>{list}</div>;
         })
       )}
+      <Pagination
+        totalPost={sortedList?.length}
+        postsPerPage={POSTS_PER_PAGE}
+        page={page}
+        setPage={setPage}
+      />
     </div>
   );
 };
+
+const POSTS_PER_PAGE = 33;
 
 export default List;

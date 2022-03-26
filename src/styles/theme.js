@@ -10,11 +10,16 @@ const wrapper = css`
 
 const colors = {
   primary: '#ff9270',
+  blue: '#8fc4ff',
+  pink: '#f5788c',
+  gray100: '#848c94',
+  gray200: '#ced4da',
   gray300: '#e3e3e3',
   gray500: '#bbbbbb',
   gray800: '#f0f0f0',
   white: '#ffffff',
   black: '#000000',
+  black100: '#212529',
 };
 
 const media = {
