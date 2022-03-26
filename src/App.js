@@ -3,14 +3,17 @@ import Home from '@/pages/Home';
 import List from '@/pages/List';
 import Detail from '@/pages/Detail';
 import NotFound from '@/pages/NotFound';
+import Layout from './components/Layout';
 
 const App = () => {
   return (
     <Routes>
       <Route path='/' element={<Home />} />
-      <Route path='/list/:id' element={<List />} />
-      <Route path='/detail/:id' element={<Detail />} />
-      <Route path='/*' element={<NotFound />} />
+      <Route element={<Layout />}>
+        <Route path='/list/:id' element={<List />} />
+        <Route path='/detail/:id' element={<Detail />} />
+        <Route path='/*' element={<NotFound />} />
+      </Route>
     </Routes>
   );
 };

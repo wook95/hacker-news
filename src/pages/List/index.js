@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from 'react-query';
+import Pagination from '@/pages/List/Pagination';
 import getList from '@/apis/api/list';
 import getListDescending from '@/apis/services/list';
-import Pagination from '@/pages/List/Pagination';
 
 const List = () => {
   const params = useParams();
@@ -21,7 +21,7 @@ const List = () => {
 
   return (
     <div>
-      <h1>list</h1>
+      <h1>{category}</h1>
       {isLoading ? (
         <div>Loading . . .</div>
       ) : (
