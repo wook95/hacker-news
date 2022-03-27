@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useQuery } from 'react-query';
-import styled from 'styled-components';
 import LoadingSpinner from '@/components/base/LoadingSpinner';
 import Pagination from '@/pages/List/Pagination';
+import ListCard from '@/pages/List/ListCard';
 import getList from '@/apis/api/list';
 import getListDescending from '@/apis/services/list';
 import { POSTS_PER_PAGE } from '@/utils/constants/pagination';
@@ -38,7 +38,7 @@ const List = () => {
         sortedList.slice(offset, offset + POSTS_PER_PAGE).map(list => {
           return (
             <Link key={list} to={`/detail/${list}`}>
-              <ListCard>{list}</ListCard>
+              <ListCard listId={String(list)} />
             </Link>
           );
         })
@@ -52,20 +52,5 @@ const List = () => {
     </>
   );
 };
-
-const ListCard = styled.div`
-  padding: 2rem 1rem;
-  margin-bottom: 1rem;
-  font-size: 1.4rem;
-  border: 0.1rem solid #ccc;
-  border-radius: 0.5rem;
-  box-shadow: 0.2rem 0.2rem 0.2rem 0.1rem ${props => props.theme.colors.gray800};
-  transition: ease 150ms;
-
-  &:hover {
-    background: ${props => props.theme.colors.gray800};
-    transform: translateY(-0.5rem);
-  }
-`;
 
 export default List;

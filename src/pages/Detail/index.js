@@ -17,7 +17,6 @@ const Detail = () => {
     data: postDetail,
   } = useQuery(postId, () => getDetail(postId), {});
   if (error) return 'An error has occurred: ' + error.message;
-
   const comments = postDetail?.kids;
 
   return (
