@@ -5,6 +5,7 @@ import DOMPurify from 'dompurify';
 import Comment from '@/pages/Detail/Comment';
 import LoadingSpinner from '@/components/base/LoadingSpinner';
 import getDetail from '@/apis/api/detail';
+import calculateTimeAgo from '@/utils/function/calculateTimeBefore';
 
 const Detail = () => {
   const params = useParams();
@@ -25,13 +26,10 @@ const Detail = () => {
         <LoadingSpinner />
       ) : (
         <div>
-          <p>제목 {postDetail.title}</p>
-          <p>글쓴이 {postDetail.by}</p>
-          <p>
-            시간{' '}
-            {new Intl.DateTimeFormat('ko-KR').format(postDetail.time * 1000)}
-          </p>
-          <p>score {postDetail.score}</p>
+          <p>title: {postDetail.title}</p>
+          <p>author: {postDetail.by}</p>
+          <p>time: {calculateTimeAgo(postDetail.time)}</p>
+          <p>score: {postDetail.score}</p>
           {postDetail?.text && (
             <>
               <span>text </span>

@@ -1,6 +1,7 @@
 import { useQueries } from 'react-query';
 import LoadingSpinner from '@/components/base/LoadingSpinner';
 import getDetail from '@/apis/api/detail';
+import calculateTimeAgo from '@/utils/function/calculateTimeBefore';
 
 const Comment = ({ comments }) => {
   const commentQueries = useQueries(
@@ -19,7 +20,7 @@ const Comment = ({ comments }) => {
           <div key={res.data.id}>
             <p>{res.data.by}</p>
             <p>{res.data.text}</p>
-            <p>{res.data.time}</p>
+            <p>{calculateTimeAgo(res.data.time)}</p>
           </div>
         ),
       )}
