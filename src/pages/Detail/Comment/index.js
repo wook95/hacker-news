@@ -1,4 +1,5 @@
 import { useQueries } from 'react-query';
+import LoadingSpinner from '@/components/base/LoadingSpinner';
 import getDetail from '@/apis/api/detail';
 
 const Comment = ({ comments }) => {
@@ -12,7 +13,9 @@ const Comment = ({ comments }) => {
   return (
     <div>
       {commentQueries.map(res =>
-        res.isLoading ? null : (
+        res.isLoading ? (
+          <LoadingSpinner />
+        ) : (
           <div key={res.data.id}>
             <p>{res.data.by}</p>
             <p>{res.data.text}</p>

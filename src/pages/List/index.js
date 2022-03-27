@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import styled from 'styled-components';
+import LoadingSpinner from '@/components/base/LoadingSpinner';
 import Pagination from '@/pages/List/Pagination';
 import getList from '@/apis/api/list';
 import getListDescending from '@/apis/services/list';
@@ -32,7 +33,7 @@ const List = () => {
   return (
     <>
       {isLoading ? (
-        <div>Loading . . .</div>
+        <LoadingSpinner />
       ) : (
         sortedList.slice(offset, offset + POSTS_PER_PAGE).map(list => {
           return (

@@ -3,6 +3,7 @@ import { useQuery, useQueries } from 'react-query';
 import styled from 'styled-components';
 import DOMPurify from 'dompurify';
 import Comment from '@/pages/Detail/Comment';
+import LoadingSpinner from '@/components/base/LoadingSpinner';
 import getDetail from '@/apis/api/detail';
 
 const Detail = () => {
@@ -21,7 +22,7 @@ const Detail = () => {
   return (
     <>
       {isLoading ? (
-        <div>Loading . . .</div>
+        <LoadingSpinner />
       ) : (
         <div>
           <p>제목 {postDetail.title}</p>
