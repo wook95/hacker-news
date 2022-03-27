@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { PAGES_PER_BLOCK } from '@/constants/pagination';
+import { PAGES_PER_BLOCK } from '@/utils/constants/pagination';
 
 const Pagination = ({ totalPost, postsPerPage, page, setPage }) => {
   const totalPage = Math.ceil(totalPost / postsPerPage);

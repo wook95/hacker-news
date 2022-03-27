@@ -6,7 +6,7 @@ import LoadingSpinner from '@/components/base/LoadingSpinner';
 import Pagination from '@/pages/List/Pagination';
 import getList from '@/apis/api/list';
 import getListDescending from '@/apis/services/list';
-import { POSTS_PER_PAGE } from '@/constants/pagination';
+import { POSTS_PER_PAGE } from '@/utils/constants/pagination';
 
 const List = () => {
   const params = useParams();

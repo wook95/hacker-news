@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import styled from 'styled-components';
-import CATEGORIES from '@/constants/category';
+import CATEGORIES from '@/utils/constants/category';
 
 const CategoryLists = ({ isColumn } = { isColumn: false }) => {
   const params = useParams();
