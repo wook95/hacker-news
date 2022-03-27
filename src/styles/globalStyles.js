@@ -18,6 +18,10 @@ const styles = css`
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
   }
 
+  pre {
+    white-space: pre-wrap;
+  }
+
   a {
     text-decoration: none;
     color: inherit;
